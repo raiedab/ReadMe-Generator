@@ -52,9 +52,7 @@ const questions = [
             'GNU Affero General Public License',
             'GNU General Public License',
             'GNU Lesser General Public License',
-            'Mozilla Public License',
-            'The Unlicense',
-        ]
+            'Mozilla Public License',]
     },
     {
         type: 'input',
@@ -75,12 +73,12 @@ function writeToFile(fileName, data) {
         )};
 
 // TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions)
+function init(){
+   inquirer.prompt(questions)
     .then(data => {
-        writeToFile("README.md", generateMarkdown (data))
-    })
-};
+        writeToFile("README.md", generateMarkdown(data))
+        })
+    };
 
 // Function call to initialize app
 init();
